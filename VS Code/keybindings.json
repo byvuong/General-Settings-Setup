@@ -1,0 +1,115 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "shift+cmd+]",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "shift+cmd+[",
+    "command": "-workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "-workbench.action.splitEditor"
+  },
+  {
+    "key": "cmd+\\",
+    "command": "workbench.action.toggleEditorWidths"
+  },
+  {
+    "key": "shift+cmd+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "alt+w",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "cmd+b",
+    "command": "-workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "alt+q",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "alt+cmd+b",
+    "command": "-workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "cmd+3",
+    "command": "-workbench.action.focusThirdEditorGroup"
+  },
+  {
+    "key": "cmd+3",
+    "command": "terminal.focus"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "cmd+alt+i",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": { "snippet": "```{r}\n$0\n```" }
+  },
+  {
+    "key": "ctrl+cmd+[",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "cmd+1",
+    "command": "-workbench.action.focusFirstEditorGroup"
+  },
+  {
+    "key": "ctrl+cmd+]",
+    "command": "workbench.action.focusSecondEditorGroup"
+  },
+  {
+    "key": "cmd+2",
+    "command": "-workbench.action.focusSecondEditorGroup"
+  },
+  // Bill: Shift+Enter runs cell, but when text selected runs in same Interactive Window (no new kernel)
+
+  {
+    "key": "shift+enter",
+    "command": "-jupyter.runcurrentcelladvance",
+    "when": "notebookCellListFocused && !interactiveEditorFocused && notebookCellType == 'code' || editorTextFocus && inputFocus && notebookEditorFocused && !interactiveEditorFocused"
+  },
+  {
+    "key": "shift+enter",
+    "command": "jupyter.runcurrentcell",
+    "when": "editorTextFocus && editorLangId == 'python' && !editorHasSelection"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "jupyter.execSelectionInteractive",
+    "when": "editorTextFocus && editorLangId == 'python' && editorHasSelection"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "jupyter.execSelectionInteractive",
+    "when": "editorTextFocus && editorLangId == 'python'"
+  },
+  {
+    "key": "shift+cmd+y",
+    "command": "composer.showComposerChatHistory"
+  }
+  // ,
+  // {
+  //   "key": "shift+cmd+o",
+  //   "command": "-workbench.action.gotoSymbol",
+  //   // "args": "@:",
+  //   "when": "!accessibilityHelpIsShown && !accessibleViewIsShown"
+  // }
+]
